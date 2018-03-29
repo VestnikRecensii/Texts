@@ -9,6 +9,10 @@
 \usepackage{caption,subcaption}
 \usepackage{listings}
 \usepackage{titling}
+\usepackage{soulpos}
+\usepackage{soul}
+
+\definecolor{lightcyan}{rgb}{0.88, 1.0, 1.0}
 
 \lstdefinestyle{shared}
 {
@@ -33,7 +37,7 @@
     basicstyle=\small\tt,
     keywordstyle=\color{blue},
     commentstyle=\color[rgb]{0.13,0.54,0.13},
-    backgroundcolor=\color{cyan!10},
+    backgroundcolor=\color{lightcyan},
     stringstyle=\color{orange},
     showstringspaces=false,
     basicstyle=\fontsize{12}{14}\selectfont\ttfamily
@@ -49,7 +53,11 @@
 \date{Февраль 2018}
 
 \newcommand{\fordummies}[1]{
-\begin{snugshade*}
-#1
-\end{snugshade*}
+    \begin{snugshade*}
+        #1
+    \end{snugshade*}
 } %Text format for dumiies
+
+\newcommand{\cppword}[1]{
+{\sethlcolor{lightcyan}\hl{#1}}
+}
